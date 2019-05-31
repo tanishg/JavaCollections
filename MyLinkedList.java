@@ -1,7 +1,7 @@
-public class MyLinkedList<T> implements Iterable<T> {
+class MyLinkedList<T> implements Iterable<T> {
 
-	T data;
-	MyLinkedList<T> next;
+	private T data;
+	private MyLinkedList<T> next;
 	private int size;
 	private MyLinkedList<T> head;
 	private MyLinkedList<T> tail;
@@ -13,7 +13,11 @@ public class MyLinkedList<T> implements Iterable<T> {
 		return newNode;
 	}
 
-	void add(T data) {
+	public int size() {
+		return size;
+	}
+
+	public void add(T data) {
 		if (head == null) {
 			head = this;
 		}
@@ -26,6 +30,9 @@ public class MyLinkedList<T> implements Iterable<T> {
 	}
 
 	public T get(int index) {
+		if (index > size || index < 1) {
+			throw new IndexOutOfBoundsException();
+		}
 		if (traverse == null) {
 			traverse = head;
 		}
@@ -57,9 +64,5 @@ public class MyLinkedList<T> implements Iterable<T> {
 		public T next() {
 			return itera.data;
 		}
-	}
-
-	public int size() {
-		return size;
 	}
 }
