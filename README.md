@@ -1,2 +1,3 @@
-# JavaLinkedList
-Create the linked list the replica of the LinkedListClass
+# JavaCollectionImplementation
+Create the Linked List the replica of the LinkedList Class
+Create the Array List the replica of the ArrayList Class
