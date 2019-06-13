@@ -1,3 +1,6 @@
+
+import java.util.Iterator;
+
 class MyLinkedList<T> implements Iterable<T> {
 
 	private T data;
