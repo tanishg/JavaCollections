@@ -1,3 +1,6 @@
+
+import java.util.Iterator;
+
 public class MyArrayList<T> implements Iterable<T> {
 
 	private static final int DEFAUL_CAP = 10;
